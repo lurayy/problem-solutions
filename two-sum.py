@@ -1,5 +1,7 @@
 # https://leetcode.com/problems/two-sum/
 
+# https://leetcode.com/problems/two-sum/submissions/865354279/
+
 
 class Solution:
 
@@ -10,19 +12,20 @@ class Solution:
                 another_index = nums.index(another)
                 print(another_index, another)
                 if another_index != index:
+                    print([index, another_index])
                     return [index, another_index]
 
 
-cases = (([2, 7, 11, 15], 9, [0, 1]), ([3, 2, 4], 6, [1, 2]),
-         ([3, 3], 6, [0, 1]), ([0, 4, 3, 0], 0, [0, 3]))
+cases = (
+    ([2, 7, 11, 15], 9, [0, 1]),
+    ([3, 2, 4], 6, [1, 2]),
+    ([3, 3], 6, [0, 1]),
+    ([0, 4, 3, 0], 0, [0, 3]),
+)
 
 sols = Solution()
 for index, case in enumerate(cases):
     if sols.twoSum(case[0], case[1]) == case[2]:
         print(f'Case {index} Passed')
-        pass
     else:
-        pass
         print(f'Case {index} failed')
-
-pass
