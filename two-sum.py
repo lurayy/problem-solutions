@@ -24,3 +24,5 @@ for index, case in enumerate(cases):
     else:
         pass
         print(f'Case {index} failed')
+
+pass
