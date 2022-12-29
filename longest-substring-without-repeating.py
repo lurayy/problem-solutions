@@ -4,5 +4,17 @@
 class Solution:
 
     def lengthOfLongestSubstring(self, s: str) -> int:
+        last = ''
+        longest = 0
         for alpha in s:
-            pass
+            if alpha in last:
+                last = last[last.index(alpha):]
+            else:
+                longest += 1
+                last = f'{last}{alpha}'
+        return longest
+
+
+s = Solution()
+
+print(s.lengthOfLongestSubstring('aabaab!bb'))
